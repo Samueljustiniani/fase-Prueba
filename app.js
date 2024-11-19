@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const path = require('path');
 const app = express();
 const ip = '54.167.194.202';
-const port = 3000;
+const port = 3001;
 
 // Configuración de middleware
 app.use(bodyParser.urlencoded({ extended: true }));
