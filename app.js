@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const path = require('path');
 const app = express();
-const ip = '54.167.194.202';
-const port = 3001;
+const ip = '34.233.195.1';
+const port = 3000;
 
 // Configuración de middleware
 app.use(bodyParser.urlencoded({ extended: true }));
