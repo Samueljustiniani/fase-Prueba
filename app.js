@@ -38,7 +38,7 @@ app.post('/submit-form', (req, res) => {
 
 // Página principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'donacion.html'));
+    res.sendFile(path.join(__dirname, 'public','pages','donaciones.html'));
 });
 
 app.listen(port, () => {
