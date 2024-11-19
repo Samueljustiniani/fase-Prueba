@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const path = require('path');
 const app = express();
-const ip = '34.233.195.1';
+const ip = '3.92.37.222';
 const port = 3000;
 
 // Configuración de middleware
@@ -38,7 +38,7 @@ app.post('/submit-form', (req, res) => {
 
 // Página principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public','pages','donaciones.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, () => {
