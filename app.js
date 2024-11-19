@@ -10,6 +10,8 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
+
 // Configuración de conexión a MySQL con un pool
 let pool = mysql.createPool({
     host: "practica.c920g66kq4od.us-east-1.rds.amazonaws.com",
@@ -39,7 +41,7 @@ app.post('/submit-form', (req, res) => {
 // Página principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
-});
+}); 
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://${ip}:${port}`);
