@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 
 // Configuración de conexión a MySQL con un pool
 let pool = mysql.createPool({

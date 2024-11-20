@@ -38,47 +38,53 @@
         <div class="signup-section">
             <h2>Regístrate</h2>
 
-            <form id="form" class="form" action="/submit-form" method="POST">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="nombres" placeholder="Nombre" required>
+            <form id="form" method="POST" action="/submit-form">
+                <div class="input-control">
+                    <input type="text" placeholder="Your name" id="username" name="nombres" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
-                <div class="form-group">
-                    <label for="lastname">Apellido</label>
-                    <input type="text" id="lastname" name="apellidos" placeholder="Apellido" required>
+            
+                <div class="input-control">
+                    <input type="text" placeholder="Your last name" id="Lastname" name="apellidos" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="correo" placeholder="Correo electrónico" required>
+            
+                <div class="input-control">
+                    <input type="text" placeholder="phone" id="phone" name="telefono" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Teléfono</label>
-                    <input type="text" id="phone" name="telefono" placeholder="Teléfono" required>
+            
+                <div class="input-control">
+                    <input type="email" placeholder="info@email.com" id="email" name="correo" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
-                <div class="form-group">
-                    <label for="donationtype">Tipo de donación</label>
-                    <select id="donationtype" name="seleccion_objetos" required>
+            
+                <div class="input-control">
+                    <select name="seleccion_objetos" id="donation">
                         <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Ropa">Ropa</option>
                         <option value="Alimentos">Alimentos</option>
-                        <option value="Útiles escolares">Útiles escolares</option>
-                        <option value="Otros">Otros</option>
+                        <option value="Ropa">Ropa</option>
+                        <option value="Electrodomesticos">Electrodomésticos</option>
+                        <option value="Utiles Escolares">Útiles Escolares</option>
                     </select>
+                    <small>Error message</small>
                 </div>
-                <div class="form-group">
-                    <input type="checkbox" id="showComments" name="showComments" onclick="toggleComments()">
-                    <label for="showComments">Añadir comentario</label>
+            
+                <div>
+                    <textarea id="comments" name="comentario" rows="4" cols="45" placeholder="Escribe tus comentarios aquí"></textarea>
                 </div>
-                <!-- Cuadro de comentario, oculto por defecto -->
-                <div id="commentsBox" style="display: none;">
-                    <label for="comments">Comentarios:</label>
-                    <textarea id="comments" name="comentario" rows="4" cols="50" placeholder="Escribe tus comentarios aquí"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Enviar</button>
-                </div>
-                <div id="errormessages" style="color:red; margin-top: 10px;"></div>
+            
+                <button type="submit">Enviar</button>
             </form>
+            
         </div>
     </div>
 <script src="/public/js/static/donacion.js"></script>
